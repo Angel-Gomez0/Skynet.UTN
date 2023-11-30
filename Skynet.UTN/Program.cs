@@ -7,7 +7,7 @@ namespace Skynet.UTN
     {
         static void Main(string[] args)
         {
-            Mapa mapa = new(8, 8);
+            /*Mapa mapa = new(8, 8);*/
 
             // Crear un operador específico, por ejemplo, K9
             Cuartel cuartel = new Cuartel(1, 2);
@@ -25,12 +25,12 @@ namespace Skynet.UTN
 
             Console.WriteLine($"Veremos cuantos operadores hay en el cuarte  {cuartel.ListaOperadores.Count}");
             
-
+            /*
 
             mapa.AgregarElemento(operador, operador.Fila, operador.Columna);
             mapa.AgregarElemento(operador2, operador2.Fila, operador2.Columna);
             mapa.AgregarElemento(operador3, operador3.Fila, operador3.Columna);
-            mapa.AgregarElemento(cuartel, cuartel.Fila, cuartel.Columna);
+            mapa.AgregarElemento(cuartel, cuartel.Fila, cuartel.Columna);*/
            
             Carga carga = new Carga();
             Carga carga2 = new Carga();
@@ -65,6 +65,12 @@ namespace Skynet.UTN
 
             ElementoMapa elemento = new ElementoMapa("Filtro",1, 7);
             cuartel.ListarEstadoDeOperadoresEnLocalizacion(elemento);
+
+            Console.WriteLine("veo la creacion del nuevo mapa: \n\n\n");
+            const int fila = 100;
+            const int columna = 100;
+            Mapa mapa = new Mapa(fila, columna);
+            mapa.MostrarMapa();
 
         }
     }
